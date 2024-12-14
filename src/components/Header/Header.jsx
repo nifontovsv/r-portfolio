@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './Header.module.scss';
-import Navbar from '../Navbar/Navbar';
+import Navbar from '../Header/Navbar/Navbar';
 
-function Header() {
+function Header(props) {
 	return (
 		<div className={styles.header}>
-			<Navbar />
+			<Navbar menu={props.menu} />
 		</div>
 	);
 }

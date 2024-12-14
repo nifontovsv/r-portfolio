@@ -1,31 +1,31 @@
 import React from 'react';
 import styles from './Navbar.module.scss';
-import NavbarItem from '../NavbarItem/NavbarItem';
+import NavbarItem from '../Navbar/NavbarItem/NavbarItem';
 
-const listMenu = [
+let listMenu = [
 	{
-		title: 'Home',
-		href: '#',
+		title: 'Profile',
+		href: '/profile',
 		id: 1,
 	},
 	{
-		title: 'About me',
-		href: '#',
+		title: 'Users',
+		href: '/users',
 		id: 2,
 	},
 	{
 		title: 'Skills',
-		href: '#',
+		href: '/skills',
 		id: 3,
 	},
 	{
 		title: 'Portfolio',
-		href: '#',
+		href: '/portfolio',
 		id: 4,
 	},
 	{
 		title: 'Contacts',
-		href: '#',
+		href: '/contacts',
 		id: 5,
 	},
 ];
@@ -35,7 +35,7 @@ function Navbar() {
 		<nav className={styles.nav}>
 			<ul className={styles.nav__list}>
 				{listMenu.map(item => (
-					<NavbarItem menuItem={item} />
+					<NavbarItem menu={item} />
 				))}
 			</ul>
 		</nav>
